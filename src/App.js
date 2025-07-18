@@ -1,17 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
-import ProductListPage from './pages/ProductListPage';
+import ProductPage from './pages/ProductPage';
 import CartPage from './pages/CartPage';
 import Header from './components/Header';
 
 function App() {
   return (
-    <Router basename="/nursery-app">
+    <Router>
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/products" element={<ProductListPage />} />
+        <Route path="/products" element={<ProductPage />} />
         <Route path="/cart" element={<CartPage />} />
       </Routes>
     </Router>
